@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li>Logout</li>
+            </ol>
+            <h2>Logout</h2>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+        <div class="container">
+            <h2>You have been logged out</h2>
+            <div class="border-top pt-3">
+                <a class="ml-2" href="{% url 'login' %}">Log In Again</a>
+            </div>
+        </div>
+    </section>
+
+</main><!-- End #main -->
+{% endblock %}
