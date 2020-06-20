@@ -2,7 +2,6 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-
 <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
@@ -18,15 +17,21 @@
         </div>
     </section><!-- End Breadcrumbs -->
 
-    <section class="inner-page">
-        <div class="container">
-            <p>
-                Profile Page
-            </p>
-            <h1>{{ user.username }}</h1>
 
+
+    <div class="content-section">
+      <div class="media">
+        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+        <div class="media-body">
+          <h2 class="account-heading">{{ user.username }}</h2>
+          <p class="text-secondary">{{ user.email }}</p>
         </div>
-    </section>
+      </div>
+      
+
+      <!-- FORM HERE -->
+    </div>
 
 </main><!-- End #main -->
 {% endblock %}
+
